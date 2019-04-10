@@ -1,0 +1,31 @@
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'wheredoyoulive/userpage.css' %}">
+
+<div id="center">
+  <div id="display">
+    <p>Welcome {{ name }}!</p>
+    <p>Username: {{ username }}</p>
+    <p>Homebase: {{ latitude }}, {{ longitude }}</p>
+  </div>
+  <div class="flex-container">
+    <a href="{{ update }}" class="button">
+      <div class="text"><p> Edit Account Info </p></div>
+    </a>
+    <a href="{{ delete }}" class="button">
+      <div class="text"><p> Delete Account </p></div>
+    </a>
+    <a href="{{ add_poi }}" class="button">
+      <div class="text"><p> Add POI </p></div>
+    </a>
+    <a href="{{ remove_poi }}" class="button">
+      <div class="text"><p> Remove POI </p></div>
+    </a>
+    <a href="{{ view_poi }}" class="button">
+      <div class="text"><p> View POI </p></div>
+    </a>
+    <a href="{{ update_poi }}" class="button">
+      <div class="text"><p> Update POI </p></div>
+    </a>
+  </div>
+</div>
