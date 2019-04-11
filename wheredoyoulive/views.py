@@ -28,6 +28,11 @@ def show_users(request):
 
 #Makes new user
 def make(request):
+######### If you want to retrieve the data directly #########
+    # if request.method == "POST": # or PATCH, etc.
+    #     data = QueryDict(request.META["QUERY_STRING"]).dict()
+    #     # do something with data, which will be a dictionary
+    #     #   of all the keys and values passed in
     if request.method == 'POST':
         form = CreateForm(request.POST)
         if form.is_valid():
